@@ -74,9 +74,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ details }) => {
                     >
                       Visit website
                     </a>
-                     <button className="bg-white text-gray-600 border border-gray-600 hover:bg-gray-100 hover:border-gray-800 font-semibold py-1.5 px-3 rounded-full text-base transition-colors">
-                        More
-                    </button>
                 </div>
             </div>
 

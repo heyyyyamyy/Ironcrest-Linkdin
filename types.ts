@@ -49,4 +49,6 @@ export interface Person {
   name: string;
   title: string;
   image: string;
+  // Optional department/category used for filtering in People section
+  department?: 'Engineering' | 'Operations' | 'Leadership' | string;
 }
