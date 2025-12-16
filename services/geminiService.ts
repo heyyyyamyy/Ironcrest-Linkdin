@@ -17,15 +17,6 @@ const generateHistoricalPosts = (): Post[] => {
   const currentYear = new Date().getFullYear();
   const startYear = 2018;
   
-  const festivalTemplates = [
-    { name: "New Year", content: "Happy New Year from Ironcrest! 🎆 Wishing everyone a safe and prosperous year ahead. #Ironcrest #NewYear" },
-    { name: "Diwali", content: "Wishing a very Happy Diwali to our teams in India and around the world! May the festival of lights bring joy and prosperity. 🪔" },
-    { name: "Eid", content: "Eid Mubarak! Sending warm wishes to our colleagues and partners celebrating. 🌙" },
-    { name: "Christmas", content: "Merry Christmas from our offshore family to yours! 🎄 Thank you for a year of hard work and dedication." },
-    { name: "Thanksgiving", content: "This Thanksgiving, we are grateful for our resilient crews braving the elements to power the world. 🦃" },
-    { name: "Labor Day", content: "Happy Labor Day! Celebrating the strength and dedication of our 10,000+ employees. You are the backbone of Ironcrest. 👷‍♂️" }
-  ];
-
   const updateTemplates = [
     "Successfully installed the new jacket foundation for Project Alpha. A massive engineering feat! 🏗️",
     "Safety Milestone: 1 Million man-hours LTI free on the Helios Rig. Safety is our priority.",
@@ -49,26 +40,8 @@ const generateHistoricalPosts = (): Post[] => {
     const yearDiff = currentYear - year;
     const yearSuffix = yearDiff === 0 ? '' : `${yearDiff}y`;
 
-    // Add Festivals (Approx 4-5 per year)
-    festivalTemplates.forEach((fest, idx) => {
-      // Simple randomization to not have every festival every year
-      if (Math.random() > 0.2) { 
-        const isImage = Math.random() > 0.3; // 70% chance of image for festivals
-        posts.push({
-            id: `post-${idCounter++}`,
-            author: 'Ironcrest Developers',
-            authorImage: LOGO_URL,
-            content: fest.content,
-            likes: Math.floor(Math.random() * 5000) + 1000,
-            comments: Math.floor(Math.random() * 300),
-            timeAgo: yearDiff === 0 ? `${Math.floor(Math.random() * 11) + 1}mo` : yearSuffix,
-            image: isImage ? `https://picsum.photos/seed/${year}${fest.name}/800/400` : undefined
-        });
-      }
-    });
-
-    // Add Generic Updates (Approx 8-10 per year)
-    const numUpdates = Math.floor(Math.random() * 5) + 8; 
+    // Add Project / Company Updates Only (Approx 12-14 per year)
+    const numUpdates = Math.floor(Math.random() * 3) + 12; 
     for (let i = 0; i < numUpdates; i++) {
         const template = updateTemplates[Math.floor(Math.random() * updateTemplates.length)];
         const isImage = Math.random() > 0.5; // 50% chance
