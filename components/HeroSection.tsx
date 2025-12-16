@@ -34,7 +34,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ details }) => {
         </div>
 
         <div className="flex justify-between items-start">
-            <div className="mt-2">
+            <div className="mt-6">
                 <h1 className="text-2xl font-bold text-gray-900 leading-tight">{details.name}</h1>
                 <p className="text-base text-gray-900 mt-1">{details.tagline}</p>
                 
