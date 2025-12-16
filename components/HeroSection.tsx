@@ -66,9 +66,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ details }) => {
                             </>
                          )}
                     </button>
-                    <button className="bg-linkedin-blue hover:bg-linkedin-blueHover text-white font-semibold py-1.5 px-4 rounded-full text-base transition-colors flex items-center gap-1">
-                        Visit website
-                    </button>
+                    <a
+                      href="https://www.ironcrestdevelopers.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-linkedin-blue hover:bg-linkedin-blueHover text-white font-semibold py-1.5 px-4 rounded-full text-base transition-colors flex items-center gap-1"
+                    >
+                      Visit website
+                    </a>
                      <button className="bg-white text-gray-600 border border-gray-600 hover:bg-gray-100 hover:border-gray-800 font-semibold py-1.5 px-3 rounded-full text-base transition-colors">
                         More
                     </button>

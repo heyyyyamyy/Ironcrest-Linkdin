@@ -1,10 +1,10 @@
 import React from 'react';
 import { Job } from '../types';
 import { MapPin, Clock, Briefcase } from 'lucide-react';
+import logo from '../logo.png';
 
 export const JobsSection: React.FC = () => {
-  // SVG Data URI for Ironcrest Logo (reused for consistency)
-  const LOGO_URL = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='100' fill='%23ea8c10'/%3E%3Cpath fill='white' d='M384.6 153.2l-51.4-51.4c-9.2-9.2-24.2-9.2-33.4 0L193 208.6l-39-39c-9.2-9.2-24.2-9.2-33.4 0L76.9 213.3c-9.2 9.2-9.2 24.2 0 33.4l39 39L53.7 347.9c-15.3 15.3-15.3 40.1 0 55.4l55.4 55.4c15.3 15.3 40.1 15.3 55.4 0l62.2-62.2 39 39c9.2 9.2 24.2 9.2 33.4 0l43.7-43.7c9.2-9.2 9.2-24.2 0-33.4l-39-39 106.8-106.8c9.2-9.2 9.2-24.2 0-33.4z'/%3E%3C/svg%3E";
+  const LOGO_URL = logo;
 
   const jobs: Job[] = [
     {
